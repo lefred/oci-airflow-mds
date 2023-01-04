@@ -1,6 +1,7 @@
 #!/bin/bash
 #set -x
 
+dnf reinstall -y python39-six
 dnf reinstall -y python3-six
 dnf install -y oci-utils
 
@@ -9,6 +10,7 @@ firewall-cmd --reload
 
 mkdir /var/run/airflow
 chown airflow /var/run/airflow
+chown -R airflow /opt/airflow
 
 
 systemctl daemon-reload
