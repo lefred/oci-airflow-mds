@@ -1,7 +1,7 @@
 title: "Airflow on OCI with MDS"
 description: "Airflow on OCI with MySQL Database Service"
-schemaVersion: 1.0.0
-version: "20220407"
+schemaVersion: 1.1.0
+version: "20230104"
 locale: "en"
 
 

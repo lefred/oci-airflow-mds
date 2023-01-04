@@ -98,7 +98,7 @@ variable "mds_ip" {
 
 variable "airflow_version" {
   description = "Airflow version to use"
-  default     = "2.2.5"
+  default     = "2.5.0"
 }
 
 variable "airflow_email" {

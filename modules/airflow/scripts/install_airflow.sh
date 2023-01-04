@@ -3,9 +3,10 @@
 
 export AIRFLOW_HOME=/opt/airflow
 AIRFLOW_VERSION=${airflow_version}
-PYTHON_VERSION="$(python --version | cut -d " " -f 2 | cut -d "." -f 1-2)"
-CONSTRAINT_URL="https://raw.githubusercontent.com/apache/airflow/constraints-${airflow_version}/constraints-$PYTHON_VERSION.txt"
-python3 -m pip install "apache-airflow==${airflow_version}" --constraint "$CONSTRAINT_URL"
+#PYTHON_VERSION="$(python --version | cut -d " " -f 2 | cut -d "." -f 1-2)"
+PYTHON_VERSION=3.9
+CONSTRAINT_URL="https://raw.githubusercontent.com/apache/airflow/constraints-${airflow_version}/constraints-3.9.txt"
+python3.9 -m pip install "apache-airflow==${airflow_version}" --constraint "$CONSTRAINT_URL"
 
 
 cat <<EOT1 >> /etc/systemd/system/airflow-webserver.service
